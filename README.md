@@ -1,4 +1,11 @@
 # Real Estate Platform
+<img width="1918" height="941" alt="image" src="https://github.com/user-attachments/assets/7b1358f9-b357-4d51-9a77-cc09274f92b8" />
+<img width="1918" height="940" alt="image" src="https://github.com/user-attachments/assets/21ba0440-34e3-435d-8f6f-cdd83834e903" />
+<img width="1908" height="962" alt="image" src="https://github.com/user-attachments/assets/4d7a9fd4-2178-4f19-9ce1-059eb01eb3bd" />
+<img width="1862" height="955" alt="image" src="https://github.com/user-attachments/assets/1dc232c0-1df4-47a4-ab88-08f78d34cb91" />
+<img width="1918" height="865" alt="image" src="https://github.com/user-attachments/assets/309d5493-6a4e-4513-b522-5f9069f4bca6" />
+<img width="1918" height="905" alt="image" src="https://github.com/user-attachments/assets/98d1b3f5-bfd0-4b4a-875b-8b5a2f921bef" />
+<img width="1917" height="952" alt="image" src="https://github.com/user-attachments/assets/7e4df7d4-48cc-484c-8aef-3baf4c36432f" />
 
 A full-stack real estate application with a Laravel backend, React/Vite frontend (TypeScript), and a React Native mobile client. This repository contains three folders: `backend`, `frontend`, and `mobile`.
 
