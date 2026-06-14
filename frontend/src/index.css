@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-fa: "Vazirmatn", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-ar: "Cairo", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-900: #1e3a8a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body {
+    @apply antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overscroll-behavior-x: none;
+  }
+
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  [dir="rtl"] body,
+  [dir="rtl"] .font-fa {
+    font-family: var(--font-fa);
+  }
+
+  .font-ar {
+    font-family: var(--font-ar);
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 rounded-lg
+           hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700/50
+           transition-colors;
+  }
+
+  .btn-primary {
+    @apply px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 rounded-lg
+           hover:bg-blue-700 active:bg-blue-800 transition-colors shadow-sm
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply px-5 py-2.5 text-sm font-semibold text-blue-600 dark:text-blue-300
+           border border-blue-600 dark:border-blue-500 rounded-lg
+           hover:bg-blue-50 dark:hover:bg-blue-600/30 hover:text-blue-700 dark:hover:text-white
+           transition-colors;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight text-start;
+  }
+
+  .section-eyebrow {
+    @apply text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide text-start;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0;
+  }
+
+  .section-header {
+    @apply flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-10 min-w-0;
+  }
+
+  .view-all-link {
+    @apply inline-flex items-center gap-1.5 shrink-0 self-start sm:self-auto px-4 py-2.5 rounded-xl
+           text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300
+           hover:bg-blue-50 dark:hover:bg-blue-900/20 font-semibold text-sm transition;
+  }
+
+  .mobile-nav-panel {
+    @apply rounded-2xl bg-gray-50 dark:bg-gray-800/60 p-2 flex flex-col gap-0.5;
+  }
+
+  .mobile-nav-link {
+    @apply block w-full px-4 py-3 rounded-xl text-start font-medium transition;
+  }
+
+  .glass-card {
+    @apply bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl shadow-xl
+           border border-white/20 dark:border-gray-700/50;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600
+           bg-white dark:bg-gray-700 text-gray-900 dark:text-white
+           placeholder:text-gray-400 dark:placeholder:text-gray-500;
+  }
+
+  .dark .input-field,
+  .dark select.input-field {
+    color-scheme: dark;
+  }
+
+  select.input-field option {
+    @apply bg-white text-gray-900;
+  }
+
+  .dark select.input-field option {
+    background-color: #374151;
+    color: #f9fafb;
+  }
+
+  .dark select.input-field option:checked,
+  .dark select.input-field option:hover,
+  .dark select.input-field option:focus {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+
+  .btn-danger {
+    @apply px-3 py-2 text-sm rounded-lg border transition-colors
+           border-red-300 dark:border-red-700 text-red-600 dark:text-red-400
+           hover:bg-red-50 dark:hover:bg-red-900/50 hover:text-red-700 dark:hover:text-red-200;
+  }
+}
